@@ -83,6 +83,7 @@ int main(){
 	}
 	fflush(stdin); 		
   } 
+  return 0;
 }
 
 void create(int n){
@@ -234,7 +235,7 @@ void writeFile(){
 		printf("数据不存在，写入失败！\n");
 	}else{
 	struct Student *p = head->next;
-	if((file = fopen("Student.txt","w")) == NULL){  //写入文件 w为覆盖写入文件 
+	if((file = fopen("Student.txt","w")) == NULL){  //追加写入文件 w为覆盖写入文件 
 	printf("不能打开数据文件。\n");
 	return;
 	}else{
